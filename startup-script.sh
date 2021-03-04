@@ -23,7 +23,7 @@ PROJECTID=$(curl -s "http://metadata.google.internal/computeMetadata/v1/project/
 echo "Project ID: ${PROJECTID}"
 
 # Install dependencies from apt
-apt-get install -yq openjdk-8-jdk git maven
+apt-get install -yq openjdk-11-jdk git maven
 
 mvn --version
 
@@ -45,7 +45,7 @@ cd /
 
 # Clone the source repository.
 git clone https://github.com/cloudandbeyond/chapter9-content.git
-cd inblue_customer_care
+cd chapter9-content/inblue_customer_care
 
 # Build the .war file and rename.
 # very important - by renaming the war to root.war, it will run as the root servlet.
