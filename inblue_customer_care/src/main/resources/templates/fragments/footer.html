@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" data-th-href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}">
+    <title>Footer</title>
+</head>
+<body>
+<footer class="footer mt-5" th:fragment="footer">
+    <div class="container">
+        <span class="text-muted">&copy; [[${#dates.year(#dates.createNow())}]] All Rights Reserved. Blue Wave Inc.</span>
+    </div>
+</footer>
+</body>
+</html>

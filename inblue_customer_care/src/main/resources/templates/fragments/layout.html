@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" data-th-href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}">
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Spring Boot and Google App Engine</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<div class="container">
+    <div layout:fragment="content">
+        CONTENT
+    </div>
+</div>
+<div th:replace="fragments/footer :: footer">&copy; Footer Text</div>
+</body>
+</html>

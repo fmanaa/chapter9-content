@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html layout:decorate="~{fragments/layout}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" data-th-href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}">
+    <title>Customers</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <h2 class="mt-2 mb-5">Customers</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+			<th scope="col">Products</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-th-each="customer : ${customers}">
+            <th scope="row">[[${customer.id}]]</th>
+            <td>[[${customer.name}]]</td>
+            <td>[[${customer.address}]]</td>
+			<td>[[${customer.products}]]</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
