@@ -15,6 +15,8 @@ public class Customer {
     private String name;
     private String address;
 	private String products;
+	private String payment;
+
 
 
     public long getId() {
@@ -44,10 +46,19 @@ public class Customer {
 	public String getProducts() {
         return products;
     }
-
-    public void setProducts(String products) {
+	
+	public void setProducts(String products) {
         this.products = products;
     }
+
+    public void setPaymentMethod(String payment) {
+        this.payment = payment;
+    }
+	
+	public String getPayment() {
+        return payment;
+    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -56,11 +67,12 @@ public class Customer {
         Customer customer = (Customer) o;
         return Objects.equals(name, customer.name) &&
                 Objects.equals(address, customer.address) &&
-					Objects.equals(products, customer.products);
+					Objects.equals(products, customer.products) &&
+						Objects.equals(payment, customer.payment);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, address, products);
+        return Objects.hash(name, address, products, payment);
     }
 }
