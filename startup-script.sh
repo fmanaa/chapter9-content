@@ -44,7 +44,7 @@ java -jar /opt/jetty/start.jar --add-to-startd=setuid
 cd /
 
 # Clone the source repository.
-git clone https://github.com/cloudandbeyond/chapter9-content.git
+git clone https://github.com/fmanaa/chapter9-content.git
 cd chapter9-content/inblue_customer_care
 
 # Build the .war file and rename.
